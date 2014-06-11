@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['huyu398']
   spec.email         = ['huyu.sakuya4645@gmail.com']
   spec.summary       = %q(The comfortable twitter client for vim users on Linux.)
-  spec.description   = %q(TODO: Write a longer description. Optional.)
+  spec.description   = %q()
   spec.homepage      = 'https://github.com/huyu398/rubbitter'
   spec.license       = 'MIT'
 
