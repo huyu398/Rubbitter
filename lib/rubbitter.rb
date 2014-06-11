@@ -1,4 +1,4 @@
-require "rubbitter/version"
+require 'rubbitter/version'
 
 module Rubbitter
   # Your code goes here...
