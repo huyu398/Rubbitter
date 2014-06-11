@@ -7,4 +7,6 @@ group :development do
   gem 'rubocop', '>= 0.23.0'
 end
 
+gem 'jrubyfx', '>= 1.1.0'
+
 gemspec

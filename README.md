@@ -1,18 +1,13 @@
 # Rubbitter
 
+**note**:
+_Rubbitter_ depends jruby and use jrubyfx.
+
 TODO: Write a gem description
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-    gem 'rubbitter'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
+It's simple!
 
     $ gem install rubbitter
 
