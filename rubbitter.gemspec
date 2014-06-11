@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = Rubbitter::VERSION
   spec.authors       = ['huyu398']
   spec.email         = ['huyu.sakuya4645@gmail.com']
-  spec.summary       = %q(TODO: Write a short summary. Required.)
+  spec.summary       = %q(The comfortable twitter client for vim users on Linux.)
   spec.description   = %q(TODO: Write a longer description. Optional.)
   spec.homepage      = 'https://github.com/huyu398/rubbitter'
   spec.license       = 'MIT'
