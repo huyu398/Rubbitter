@@ -9,4 +9,6 @@ end
 
 gem 'jrubyfx', '>= 1.1.0'
 
+gem 'oauth', '>= 0.4.7'
+
 gemspec
