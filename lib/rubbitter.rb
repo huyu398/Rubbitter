@@ -1,3 +1,4 @@
+require 'rubbitter/config'
 require 'rubbitter/version'
 
 module Rubbitter
