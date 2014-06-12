@@ -2,4 +2,4 @@
 
 require 'rubbitter'
 
-Rubbitter::Config.new
+CONFIG = Rubbitter::Config.new
