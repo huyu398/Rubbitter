@@ -11,10 +11,10 @@ module Rubbitter
       if File.exist?(CONFIG_FILE)
         @property = YAML.load_file(CONFIG_FILE)
       else
-        # Rubbitter::Authentication.launch
+        Rubbitter::Interface::AuthenticationApp.launch
         # [todo] - Preceding code is gui function. CLI test code is following.
-        @property = cli_auth
-        File.open(CONFIG_FILE, 'w') { |f| YAML.dump(@property, f) }
+        # @property = cli_auth
+        # File.open(CONFIG_FILE, 'w') { |f| YAML.dump(@property, f) }
       end
     end
 

@@ -5,6 +5,7 @@ module Rubbitter
     class AuthenticationApp < JRubyFX::Application
       def start(stage)
         with(stage, title: 'Authetication') do
+          fxml 'authentication.fxml'
           show
         end
       end
