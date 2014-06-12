@@ -20,4 +20,4 @@ tmp
 *.o
 *.a
 mkmf.log
-fxml/.jruby_cache
+.jrubyfx_cache
