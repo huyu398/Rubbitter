@@ -19,10 +19,28 @@ module Rubbitter
       end
 
       def pin_entered
-        access_token = @request_token.get_access_token(oauth_verifier: @pin_field.text)
+        begin
+          access_token = @request_token.get_access_token(oauth_verifier: @pin_field.text)
+        rescue OAuth::Unauthorized
+          show_dialog
+          return @pin_field.clear
+        end
         token_hash = { token: { access_token: access_token.token, access_token_secret: access_token.secret } }
         Rubbitter::Config.make_config_file(token_hash)
         Platform.exit
+      end
+
+      private
+
+      # [todo] - Refactoring, this is seemed like java code...
+      def show_dialog
+        error_dialog = Stage.new(StageStyle::UTILITY)
+        Rubbitter::Interface::AuthenticationDialogController.load_into(error_dialog)
+        error_dialog.initOwner(@pin_field.scene.window)
+        error_dialog.init_modality = Modality::WINDOW_MODAL
+        error_dialog.resizable = false
+        error_dialog.title = 'Unauthorized error'
+        error_dialog.show_and_wait
       end
     end
   end
