@@ -33,7 +33,7 @@
     <HBox maxHeight="-Infinity" maxWidth="+Infinity" minHeight="-Infinity" minWidth="-Infinity" GridPane.columnIndex="1" GridPane.rowIndex="1">
       <children>
         <Pane maxWidth="+Infinity" HBox.hgrow="ALWAYS" />
-      <Button fx:id="ok_button" onAction="#button_clicked" minWidth="80.0" mnemonicParsing="false" text="Ok" HBox.hgrow="NEVER">
+      <Button fx:id="ok_button" cancelButton="true" onAction="#button_clicked" minWidth="80.0" mnemonicParsing="false" text="Ok" HBox.hgrow="NEVER">
         <HBox.margin>
           <Insets left="14.0" />
         </HBox.margin>
