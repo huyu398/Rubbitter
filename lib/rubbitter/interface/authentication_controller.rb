@@ -32,14 +32,11 @@ module Rubbitter
 
       private
 
-      # [todo] - Refactoring, this is seemed like java code...
       def show_dialog
-        error_dialog = Stage.new(StageStyle::UTILITY)
+        error_dialog = stage(StageStyle::UTILITY, title: 'Unauthorized error', resizable: false)
         Rubbitter::Interface::AuthenticationDialogController.load_into(error_dialog)
-        error_dialog.initOwner(@pin_field.scene.window)
+        error_dialog.init_owner(@pin_field.scene.window)
         error_dialog.init_modality = Modality::WINDOW_MODAL
-        error_dialog.resizable = false
-        error_dialog.title = 'Unauthorized error'
         error_dialog.show_and_wait
       end
     end
