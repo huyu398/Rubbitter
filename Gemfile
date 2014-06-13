@@ -10,5 +10,6 @@ end
 gem 'jrubyfx', '>= 1.1.0'
 
 gem 'oauth', '>= 0.4.7'
+gem 'twitter', '>= 5.10.0'
 
 gemspec
