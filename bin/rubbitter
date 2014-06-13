@@ -3,3 +3,4 @@
 require 'rubbitter'
 
 CONFIG = Rubbitter::Config.new
+Rubbitter::Interface::TimelineApp.launch
