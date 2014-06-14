@@ -16,7 +16,13 @@ module Rubbitter
           c.access_token_secret = token[:access_token_secret]
         end
 
-        p client.home_timeline
+        timeline_array = client.home_timeline
+        timeline_array.map! do |t|
+          "#{t.user.name}: #{t.text}"
+        end
+        # [todo] - I don't really know why it don't work
+        # @timeline.scroll_pane.hbar_policty(ScrollPane::ScrollBarPolicy::NEVER)
+        @timeline.items = FXCollections.observable_list(timeline_array)
       end
     end
   end
