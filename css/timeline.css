@@ -4,6 +4,7 @@
 }
 .mylistview .increment-button,
 .mylistview .decrement-button {
+  -fx-background-color: transparent;
   -fx-border-color: derive(gray, 80%);
 }
 .mylistview .increment-button:hover, .mylistview .increment-button:pressed,
@@ -13,21 +14,39 @@
   -fx-border-color: derive(gray, 80%);
   -fx-padding: 10px;
 }
-.mylistview .scroll-bar:horizontal .track, .mylistview .scroll-bar:vertical .track {
+.mylistview .scroll-bar .track {
   -fx-background-color: transparent;
   -fx-background-radius: 0em;
-  -fx-border-color: derive(gray, 80%);
+  -fx-border-color: transparent;
+  -fx-border-radius: 2em;
 }
-.mylistview .scroll-bar:horizontal .thumb, .mylistview .scroll-bar:vertical .thumb {
+.mylistview .scroll-bar .thumb {
   -fx-background-color: derive(black, 90%);
-  -fx-background-insets: 0, 0, 0;
-  -fx-background-radius: 0em;
+  -fx-background-insets: 2, 0, 0;
+  -fx-background-radius: 2em;
 }
-.mylistview .scroll-bar:horizontal:hover .track, .mylistview .scroll-bar:horizontal:pressed .track, .mylistview .scroll-bar:vertical:hover .track, .mylistview .scroll-bar:vertical:pressed .track {
+.mylistview .scroll-bar .increment-arrow,
+.mylistview .scroll-bar .decrement-arrow {
+  -fx-shape: " ";
+  -fx-padding: 0;
+}
+.mylistview .scroll-bar:horizontal .increment-button,
+.mylistview .scroll-bar:horizontal .decrement-button {
+  -fx-background-color: transparent;
+  -fx-background-radius: 0em;
+  -fx-padding: 0 0 5 0;
+}
+.mylistview .scroll-bar:vertical .increment-button,
+.mylistview .scroll-bar:vertical .decrement-button {
+  -fx-background-color: transparent;
+  -fx-background-radius: 0em;
+  -fx-padding: 0 5 0 0;
+}
+.mylistview .scroll-bar:hover .track, .mylistview .scroll-bar:pressed .track {
   -fx-background-color: derive(#434343, 20%);
   -fx-background-radius: 0em;
   -fx-opacity: 0.2;
 }
-.mylistview .scroll-bar:horizontal:hover .thumb, .mylistview .scroll-bar:horizontal:pressed .thumb, .mylistview .scroll-bar:vertical:hover .thumb, .mylistview .scroll-bar:vertical:pressed .thumb {
+.mylistview .scroll-bar:hover .thumb, .mylistview .scroll-bar:pressed .thumb {
   -fx-background-color: derive(black, 50%);
 }

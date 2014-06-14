@@ -32,15 +32,47 @@
                 radius: 0em;
             }
             -fx-border: {
-                color: derive(gray, 80%);
+                color: transparent;
+                radius: 2em;
             }
         }
         // The main scrollbar **thumb** CSS class which we drag every time (movable)
         .thumb {
             -fx-background: {
                 color: derive(black, 90%);
-                insets: 0, 0, 0;
-                radius: 0em;
+                insets: 2, 0, 0;
+                radius: 2em;
+            }
+        }
+        .increment,
+        .decrement {
+            &-arrow {
+                -fx-shape: " ";
+                -fx-padding: 0;
+            }
+        }
+        &:horizontal {
+            .increment,
+            .decrement {
+                &-button {
+                    -fx-background: {
+                        color: transparent;
+                        radius: 0em;
+                    }
+                    -fx-padding: 0 0 5 0;
+                }
+            }
+        }
+        &:vertical {
+            .increment,
+            .decrement {
+                &-button {
+                    -fx-background: {
+                        color: transparent;
+                        radius: 0em;
+                    }
+                    -fx-padding: 0 5 0 0;
+                }
             }
         }
         &:hover,
