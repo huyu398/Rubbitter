@@ -18,11 +18,12 @@ module Rubbitter
 
         timeline_array = client.home_timeline
         timeline_array.map! do |t|
-          "#{t.user.name}: #{t.text}"
+          { icon: t.user.profile_image_url.to_s, text: t.text }
         end
         # [todo] - I don't really know why it don't work
         # @timeline.scroll_pane.hbar_policty(ScrollPane::ScrollBarPolicy::NEVER)
         @timeline.items = FXCollections.observable_list(timeline_array)
+        @timeline.cell_factory = proc { Rubbitter::Interface::TweetCell.new }
       end
     end
   end
