@@ -9,6 +9,6 @@
       <ListView fx:id="timeline" editable="true" prefHeight="600.0" prefWidth="400.0" styleClass="mylistview" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
    </children>
    <stylesheets>
-      <URL value="file:///home/huyu/workspace/rubbitter/css/timeline.css" />
+      <URL value="@../css/timeline.css" />
    </stylesheets>
 </AnchorPane>
